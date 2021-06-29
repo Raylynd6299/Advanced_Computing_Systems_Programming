@@ -1,0 +1,1 @@
+cmd_/home/lynd/Desktop/8Semestre/ACSP/Tareas/Tarea_4/Tarea/Tarea_KThread_4.mod := { echo  /home/lynd/Desktop/8Semestre/ACSP/Tareas/Tarea_4/Tarea/Tarea_KThread_4.o;  echo; } > /home/lynd/Desktop/8Semestre/ACSP/Tareas/Tarea_4/Tarea/Tarea_KThread_4.mod

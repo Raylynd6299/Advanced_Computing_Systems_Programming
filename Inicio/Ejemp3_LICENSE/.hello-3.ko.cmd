@@ -1,0 +1,1 @@
+cmd_/home/lynd/Desktop/8Semestre/ACSP/Inicio/Ejemp3_LICENSE/hello-3.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000 --build-id=sha1  -T ./scripts/module-common.lds -o /home/lynd/Desktop/8Semestre/ACSP/Inicio/Ejemp3_LICENSE/hello-3.ko /home/lynd/Desktop/8Semestre/ACSP/Inicio/Ejemp3_LICENSE/hello-3.o /home/lynd/Desktop/8Semestre/ACSP/Inicio/Ejemp3_LICENSE/hello-3.mod.o;  true

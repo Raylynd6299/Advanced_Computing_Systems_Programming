@@ -1,0 +1,1 @@
+cmd_/home/lynd/Desktop/8Semestre/ACSP/Inicio/Ejemp2/Module.symvers := sed 's/ko$$/o/' /home/lynd/Desktop/8Semestre/ACSP/Inicio/Ejemp2/modules.order | scripts/mod/modpost  -a   -o /home/lynd/Desktop/8Semestre/ACSP/Inicio/Ejemp2/Module.symvers -e -i Module.symvers   -T -

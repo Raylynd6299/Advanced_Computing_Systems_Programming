@@ -1,0 +1,1 @@
+cmd_/home/lynd/Desktop/8Semestre/ACSP/Inicio/Ejemp3_LICENSE/hello-3.mod := { echo  /home/lynd/Desktop/8Semestre/ACSP/Inicio/Ejemp3_LICENSE/hello-3.o;  echo; } > /home/lynd/Desktop/8Semestre/ACSP/Inicio/Ejemp3_LICENSE/hello-3.mod

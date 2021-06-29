@@ -1,0 +1,1 @@
+cmd_/home/lynd/Desktop/8Semestre/ACSP/Inicio/HM/modules.order := {   echo /home/lynd/Desktop/8Semestre/ACSP/Inicio/HM/hello-1.ko; :; } | awk '!x[$$0]++' - > /home/lynd/Desktop/8Semestre/ACSP/Inicio/HM/modules.order

@@ -1,0 +1,48 @@
+/*
+	param3.c Parametros de kernel
+	Para modificar los parametros de kernel escribir el valor en el archivo
+	/sys/module/<Nombre_Modulo>/parameters/<Nombre_Parametro>
+*/
+#include <linux/kernel.h>
+#include <linux/module.h>
+#include <linux/init.h>
+#include <linux/moduleparam.h>
+
+#define TAM 5
+
+MODULE_LICENSE("GPL");
+MODULE_AUTHOR("Raymundo Pulido");
+MODULE_DESCRIPTION("ESTE ES UN EJEMPLO DE MODULO DE KERNEL");
+MODULE_INFO(driver,"PULSO CARDIACO");
+MODULE_INFO(interface,"UART");
+MODULE_VERSION("1.0");
+
+static int mivar1 __initdata = 10;
+static int irq = 7;
+static char* comando = "derecha";
+//Declaracion de la variable statica
+static int datos[TAM] = {1,2,3,4,5};
+static int numEle = TAM;
+module_param(comando,charp,0660);
+module_param(irq,int,0660);		
+module_param_array( datos,int,&numEle, 0660);	
+
+MODULE_PARM_DESC( datos,"Arreglo de datos");
+MODULE_PARM_DESC( irq,"datos");
+MODULE_PARM_DESC( comando,"Comando de control");
+
+static int __init funcion_inicio(void){
+	printk(KERN_INFO "Ejemplo 3 de parametros\n");
+
+	printk(KERN_INFO "Mi variable es:%d \n",mivar1);
+	printk(KERN_INFO "Mi variable es datos[0] :%d \n",datos[0]);
+	printk(KERN_INFO "MI comando es %s\n",comando);
+	return 0;
+}
+static void __exit funcion_final(void){
+	printk(KERN_INFO "Terminando la ejecucion del ejemplo 3 de parametros\n");
+ 	printk(KERN_INFO "Mi variable datos[0] al terminar:%d\n",datos[0]);
+	printk(KERN_INFO "MI comando es %s\n",comando);
+}
+module_init( funcion_inicio );
+module_exit( funcion_final );
